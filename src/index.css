@@ -277,3 +277,19 @@ div.sh{
     min-width: auto;
   }
 }
+
+@media screen and (max-width:450px) and (min-height: 600px) {
+  .grid{
+    gap: 15px 10px;
+  }
+}
+
+@media screen and (max-width:450px) and (min-height: 650px) {
+  .window{
+    height: 100px;
+  }
+  .grid{
+    height: 370px;
+    gap: 20px 10px;
+  }
+}
