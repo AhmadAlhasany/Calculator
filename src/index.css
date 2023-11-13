@@ -278,13 +278,8 @@ div.sh{
   }
 }
 
-@media screen and (max-width:450px) and (min-height: 600px) {
-  .grid{
-    gap: 15px 10px;
-  }
-}
 
-@media screen and (max-width:450px) and (min-height: 650px) {
+@media screen and (max-width:450px) and (min-height: 640px) {
   .window{
     height: 100px;
   }
