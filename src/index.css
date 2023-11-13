@@ -1,13 +1,279 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body, html, .root {
+  font-family:'League Spartan' , sans-serif;
+  margin: 0;
+  min-height: 100svh;
+}
+
+.common{
+  padding: 20px;
+  height: 100svh;
+  width: 100svw;
+  justify-content: center;
+  align-items: center;
+}
+
+.rf{
+  display: flex;
+}
+
+.cf{
+  display: flex;
+  flex-direction: column;
+}
+
+.hwr{
+  justify-content: space-between;
+  margin: 10px 0px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 45px;
+}
+
+.theme{
+  padding-bottom: 7px;
+  justify-content: end;
+  align-items: end;
+  margin-right: 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+p{
+  margin: 0;
+}
+
+.thb{
+  width: 80px;
+  height: 100%;
+  border-radius: 11px;
+  justify-content: space-around;
+  padding: 2px;  
+  align-items: center;
+}
+
+.thb div{
+  height: 90%;
+  width: 25%;
+  border-radius: 50%;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.thb div:hover{
+  opacity: 1;
+  cursor: pointer;
+}
+
+div.sh{
+  opacity: 1;
+}
+
+.bb{
+  background-color: #00DFD1;
+}
+
+.rb{
+  background-color: #D43D31;
+}
+
+.ob{
+  background-color: #C45604;
+}
+
+.nums {
+  justify-content: space-around;
+  font-size: 12px;
+  padding: 2px;
+  font-weight: bold;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.t1{
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.t2{
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.button{
+  width: 100%;
+  min-width: 80px;
+  height: 55px;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 8px;
+  border-bottom: 4px solid red;
+}
+
+.button:hover{
+  filter: brightness(150%);
+  cursor: pointer;
+}
+
+.window{
+  border-radius: 5px;
+  margin: 25px 0px;
+  height: 90px;
+  padding: 0px 20px;
+  min-width: 240px;
+  max-width: 420px;
+  white-space: nowrap;
+  overflow-x: scroll;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.window p{
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.window .fix{
+  height: 100%;
+  width: 1px;
+}
+
+.window::-webkit-scrollbar{
+  display: none;
+}
+
+/* here you should put the styles related to theme */
+.App1{
+  color: white;
+  background-color: #3B4664;
+}
+
+.App2{
+  color:#313129;
+  background-color: #E6E6E6;
+}
+
+.App3{
+  color: hsl(52, 100%, 62%);
+  background-color: #17062A;
+}
+
+.App1 .thb{
+  background-color: #181F32;
+}
+
+.App2 .thb{
+  background-color: #D3CDCD;
+}
+
+.App3 .thb{
+  background-color: #1E0836;
+}
+
+.App1 .grid, .App1 .window{
+  background-color: #181F32;
+}
+
+.App2 .grid{
+  background-color: #D3CDCD;
+}
+
+.App2 .window{
+  background-color: #EEEEEE;
+}
+
+.App3 .grid, .App3 .window{
+  background-color: #1E0836;
+}
+
+.App1 .button {
+  border-color: #ADA499;
+  background-color: #EAE3DB;
+  color: #373D49;
+}
+
+.App2 .button{
+  border-color: #A69C8F;
+  background-color: #E5E4E0;
+}
+
+.App3 .button{
+  border-color: hsl(290, 70%, 36%);
+  background-color: hsl(268, 47%, 21%);
+}
+
+.App1 .rd{
+  border-color: #414E71;
+  background-color: #64719A;
+  color: white;
+}
+
+.App2 .rd{
+  border-color: #1B5B63;
+  background-color: #388187;
+  color: white;
+}
+
+.App3 .rd{
+  border-color: hsl(281, 89%, 26%);
+  background-color: hsl(285, 91%, 52%);
+  color: #FFFDFF;
+}
+
+.App1 .e{
+  border-color: #942719;
+  background-color: #D13F30;
+  color: white;
+}
+
+.App2 .e{
+  border-color: #873B01;
+  background-color: #C85401;
+  color: white;
+}
+
+.App3 .e{
+  border-color: hsl(177, 92%, 70%);
+  background-color: hsl(176, 100%, 44%);
+  color: hsl(198, 20%, 13%);
+}
+
+@media(max-width: 450px){
+  .common{
+    align-items: start;
+  }
+  .hwr{
+    margin: 30px 0px;
+  }
+  .calc{
+    width: 100%;
+  }
+  .window{
+    min-width: none;
+    max-width: none;
+    height: 70px;
+    width: 100%;
+  }
+  .grid{
+    height: calc(100vh - 245px);
+    gap: 10px;
+  }
+  .button{
+    height: auto;
+    min-width: auto;
+  }
 }
