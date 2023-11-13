@@ -37,7 +37,7 @@ function Grid(props) {
           
         })}}/>
         <Button value = '.' onClick = {() => {props.setExp(pre => {return pre + '.'})}}/>
-        <Button value = {0} onClick = {() => {props.setExp(pre => {if(pre)
+        <Button value = {0} onClick = {() => {props.setExp(pre => {if(pre && pre[pre.length - 1] != ' ')
            return pre + '0'
            else
            return pre
